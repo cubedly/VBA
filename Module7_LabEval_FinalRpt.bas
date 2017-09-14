@@ -22,7 +22,7 @@ ActiveWorkbook.Sheets.Add
 ActiveSheet.Name = "Query List"
     
 'Path to AQC database in PT Folder on ptstudies login
-refpath = "M:\FP PT Program-IQM\PT Studies\AQCaddressdb\AQCAddressdb2005.mdb"
+refpath = "M:\db.mdb"
 
 Set daoDB = OpenDatabase(refpath)
 Set daoQueryDef = daoDB.QueryDefs("qry-final report email")
@@ -79,15 +79,15 @@ Dim strpath, strFilter, strFile, strname As String
         & "is named by the AQC reference number assigned to your laboratory, not your confidential lab code.  " _
         & "This electronic file replaces the mailed hard copy evaluations which were provided for previous studies.<br><br>" _
         & "Text files containing study statistics are available on request, as they are no longer provided as e-mail attachments automatically.<br><br>" _
-        & "Please contact <a href =mailto:ec.ptstudies.ec@canada.ca>ec.ptstudies.ec@canada.ca</a> if you have any questions regarding the laboratory evaluation or final report.</font><br>" _
-        & "<br><br><br><b>Fedelina DeOliveira</b><br><br>RM Technologist<br>Information and Quality Management / Water S&T Directorate/ S&T Branch<br>" _
-        & "Environment and Climate Change Canada / Government of Canada<br><a href =mailto:ec.ptstudies.ec@canada.ca>ec.ptstudies.ec@canada.ca</a> / Tel: 905-336-4942 / fax. : 905-336-8914<br><br>" _
-        & "Gestion de l'information et de la qualité /Direction des sciences et de la technologie de l'eau/Branche des S&T<br>Environnement et Changement Climatique Canada / Gouvernement du Canada<br>" _
-        & "<a href =mailto:ec.ptstudies.ec@canada.ca>ec.ptstudies.ec@canada.ca</a> / Tél. : 905-336-4942 / Telecopieur. : 905-336-8914" & .HTMLBody
+        & "Please contact placeholder if you have any questions regarding the laboratory evaluation or final report.</font><br>" _
+        & "<br><br><br>RM Technologist<br>Water S&T Directorate/ S&T Branch<br>" _
+        & "Environment and Climate Change Canada / Government of Canada<br>/ Tel:/ fax.<br><br>" _
+        & "Gestion de l'information et de la qualitÃ© /Direction des sciences et de la technologie de l'eau/Branche des S&T<br>Environnement et Changement Climatique Canada / Gouvernement du Canada<br>" _
+        & "TÃ©l./ Telecopieur." & .HTMLBody
         
         .Attachments.Add (eval)
         
-        strpath = "O:\FP PT Program\PT Final Reports\PT 0" & PTStudy & "\"
+        strpath = "O:\" & PTStudy & "\"
         strFilter = "*.pdf"
         strname = "ECCC PT"
         strFile = Dir(strpath & strname & strFilter)
