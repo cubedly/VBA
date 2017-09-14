@@ -71,9 +71,6 @@ Dim strpath, strFilter, strFile, strname As String
         
         
 'This is the HTML code for the formatting and content of the email
-'By default it is set to sign each email with Fedelinas signature
-'To change the signature please look to the line of code below that starts with " & <br><br><br><b>Fedelina DeOliveira"
-'From this line to the very last line, anyones information can be input in place for Fedelinas
         .HTMLBody = "<font face = calibri (body)>Dear Study Participant,<br><br>Attached to this e-mail is the <b>Proficiency Appraisal</b> and <b>Z-Score Summary</b> " _
         & "for each program in which your laboratory participated, as well as the <b>Final Report</b> for PT <b>#" & PTStudy & "</b>.<br><br>The <b>Laboratory Evaluation</b> " _
         & "is named by the AQC reference number assigned to your laboratory, not your confidential lab code.  " _
